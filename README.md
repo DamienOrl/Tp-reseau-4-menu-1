@@ -8,6 +8,6 @@
 
 ## Infrastructure de départ
 
-Les manipulations pour obtenir notre infrastructure de base sont disponibles [dans la partie 4 du TP précédent.](https://github.com/DamienOrl/Tp-reseau-3)
+Les manipulations pour obtenir notre infrastructure de base sont disponibles [dans la partie 4 du TP précédent.](https://github.com/DamienOrl/TP-reseau-3/blob/master/README.md#iv-lab-final)
 
 ## Renforcement de l'infrastructure
