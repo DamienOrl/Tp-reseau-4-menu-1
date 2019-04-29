@@ -1,6 +1,6 @@
 # Tp reseau 4 menu 1: Sécurisation
 
-* [Infra de base](#Infrastructure de départ)
+* [Infra de base](#infrastructure-de-départ)
 * [Renforcement](#Renforcement de l'infrastructure)
 * [Ajout de services DNSSEC](#Ajout de services DNSSEC)
 * [Construction de firewall](#Construction de firewall)
@@ -8,4 +8,4 @@
 
 ## Infrastructure de départ
 
-Les manipulations pour obtenir notre infrastructure de base sont disponibles [ici!](../TP reseau 3/README.md#iv-lab-final)
+Les manipulations pour obtenir notre infrastructure de base sont disponibles [ici!](../TP-reseau-3/README.md#iv-lab-final)
