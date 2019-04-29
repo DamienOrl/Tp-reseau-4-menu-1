@@ -8,4 +8,4 @@
 
 ## Infrastructure de départ
 
-Les manipulations pour obtenir notre infrastructure de base sont disponibles [ici!](../TP reseau 3/README.md#iv.--lab-final)
+Les manipulations pour obtenir notre infrastructure de base sont disponibles [ici!](../TP reseau 3/README.md#iv-lab-final)
