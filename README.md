@@ -9,9 +9,9 @@
 Les manipulations pour obtenir notre infrastructure de base sont disponibles [dans la partie 4 du TP précédent.](https://github.com/DamienOrl/TP-reseau-3/blob/master/README.md#iv-lab-final)
 
 ## Renforcement de l'infrastructure
-* [Enlever les SPoF](#nettoyage-des-spof-(single-point-of-failure\))
-* [Aggrégation de liens entre les switches](#utilisation-du-lacp-(link-aggregation-control-protocol\))
-* [VRRP entre les routeurs](#mise-en-place-du-vrrp-(virtual-router-redundancy-protocol\))
+* [Enlever les SPoF](#nettoyage-des-spof-single-point-of-failure)
+* [Aggrégation de liens entre les switches](#utilisation-du-lacp-link-aggregation-control-protocol)
+* [VRRP entre les routeurs](#mise-en-place-du-vrrp-virtual-router-redundancy-protocol)
 
 ### Nettoyage des SPoF (Single Point of Failure)
 Dans notre architecture, utiliser quatre routeurs ne sert pas vraiment, vu sa taille assez réduite. Nous ne garderons donc que `R1` et `R4`, les deux routeurs les plus importants (l'un étant relié au NAT, l'autre aux clients et serveurs)!
