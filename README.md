@@ -93,3 +93,30 @@ vrrp 200 priority 90
 ----
 Après ces modifications, notre infrastructure ressemble désormais à ça:
 <img src="Captures/Infra renforcée.png" />
+
+## Hé la qui va là?
+
+Pour que nous puissions nous assurer de la confidentialité des échanges(et voir si on essaye pas de nous faire une attaque de type DoS), nous allons mettre en place du port mirroring sur nos deux switches. Ce procédé nous permet de conserver une copie du trafic réseau afin de pouvoir l'analyser ensuite.
+
+L'objectif est de stocker le trafic en provenance du VLAN 10 dans `server1` et celui arrivant du VLAN 20 dans `server2`:
+
+```
+IOU1(config)# monitor session 1 source int ethernet 1/1 both
+IOU1(config)# monitor session 1 destination int ethernet 0/0
+```
+
+Avec ces deux commandes, `IOU1` envoie désormais une copie du trafic en provenance et à destination de l'interface `ethernet 1/1` à l'interface `ethernet 0/0`. Maintenant, il faut faire en sorte de faire pareille depuis `IOU2`...
+
+```
+IOU2(config)# monitor session 1 source int ethernet 1/1 both
+IOU2(config)# monitor session 1 destination int PortChannel 1
+```
+
+`IOU1` n'a plus qu'à intercepter et à envoyer vers `ethernet 1/0`, où est branché `server2`:
+
+```
+IOU1(config)# monitor session 2 source int PortChannel 1 tx (pour n'enregistrer que ceux transmis)
+IOU1(config)# monitor session 2 destination int ethernet 1/0
+```
+
+**Booyah!** Nous pouvons surveiller ce qui passe par nos deux swiches maintenant! <img src="https://media.giphy.com/media/NS7gPxeumewkWDOIxi/giphy.gif" width="350">
